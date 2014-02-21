@@ -39,3 +39,16 @@ math.multiply(2,4); // 8
 ```
 
 > Note: When overriding the property, there is no need to call `.done()` and the desired property will be automatically overridden.
+
+Transforming the return value:
+
+```js
+var getPowerLevel = function() { return 1; }
+
+var gokuPowerLevel = monkey(getPowerLevel)
+  .tr(function(level) { return level + 9000; }
+  .done();
+  
+gokuPowerLevel(); // 9001
+```
+> Note: Multiple transformations are supported, they will be applied in the order they were added. 
