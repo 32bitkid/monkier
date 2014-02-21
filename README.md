@@ -22,7 +22,7 @@ var newAdd = monkey(add)
 newAdd(1, 2); // 3
 ```
 
-> Note: Calling `done()` will return the *non-fluent* wrapped function. This can be valuable to isolate the `.before()` and `.after()` helpers from other scopes that will get the function.
+> Note: Calling `done()` will return the *non-fluent* wrapped function. This can be valuable to isolate the `.before()` and `.after()` helpers from other scopes the function will be visible.
 
 Monkey patching a property:
 
@@ -31,7 +31,7 @@ var math = {
   multiply: function(a,b) { return a * b; }
 };
 
-monkey(math, "multiple")
+monkey(math, "multiply")
   .before(function() { console.log("Before multiplication:", arguments); })
   .after(function() { console.log("After multiplication:", arguments); })  
 
