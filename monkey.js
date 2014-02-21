@@ -34,7 +34,6 @@ var monkey = (function() {
   
   
   return function monkeyPatch() {
-    console.log(arguments.length)
     var fn, apply = Function.prototype.apply;
     
     // monkey(fn)
