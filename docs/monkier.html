@@ -30,7 +30,667 @@
               
             </div>
             
-            <div class="content"><div class='highlight'><pre>(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span>{</span><span class="hljs-keyword">var</span> a=<span class="hljs-keyword">this</span>,b=<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span>{</span><span class="hljs-keyword">var</span> a=<span class="hljs-built_in">Function</span>.prototype.apply;<span class="hljs-keyword">if</span>(<span class="hljs-number">1</span>==<span class="hljs-built_in">arguments</span>.length&amp;&amp;<span class="hljs-built_in">arguments</span>[<span class="hljs-number">0</span>].apply==a)<span class="hljs-keyword">return</span> e.apply(<span class="hljs-keyword">this</span>,<span class="hljs-built_in">arguments</span>);<span class="hljs-keyword">if</span>(<span class="hljs-number">2</span>==<span class="hljs-built_in">arguments</span>.length&amp;&amp;<span class="hljs-built_in">arguments</span>[<span class="hljs-number">0</span>]&amp;&amp;<span class="hljs-built_in">arguments</span>[<span class="hljs-number">0</span>][<span class="hljs-built_in">arguments</span>[<span class="hljs-number">1</span>]]&amp;&amp;<span class="hljs-built_in">arguments</span>[<span class="hljs-number">0</span>][<span class="hljs-built_in">arguments</span>[<span class="hljs-number">1</span>]].apply==a)<span class="hljs-keyword">return</span> f.apply(<span class="hljs-keyword">this</span>,<span class="hljs-built_in">arguments</span>);<span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">TypeError</span>(<span class="hljs-string">"Invalid arguments"</span>)};<span class="hljs-string">"undefined"</span>!=<span class="hljs-keyword">typeof</span> exports?(<span class="hljs-string">"undefined"</span>!=<span class="hljs-keyword">typeof</span> module&amp;&amp;module.exports&amp;&amp;(exports=module.exports=b),exports.monkey=b):a.monkey=b;<span class="hljs-keyword">var</span> c=<span class="hljs-built_in">Array</span>.prototype.reduce||<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(a,b)</span>{</span><span class="hljs-string">"use strict"</span>;<span class="hljs-keyword">if</span>(<span class="hljs-literal">null</span>===<span class="hljs-keyword">this</span>||<span class="hljs-string">"undefined"</span>==<span class="hljs-keyword">typeof</span> <span class="hljs-keyword">this</span>)<span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">TypeError</span>(<span class="hljs-string">"Array.prototype.reduce called on null or undefined"</span>);<span class="hljs-keyword">if</span>(<span class="hljs-string">"function"</span>!=<span class="hljs-keyword">typeof</span> a)<span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">TypeError</span>(a+<span class="hljs-string">" is not a function"</span>);<span class="hljs-keyword">var</span> c,d,e=<span class="hljs-keyword">this</span>.length&gt;&gt;&gt;<span class="hljs-number">0</span>,f=!<span class="hljs-number">1</span>;<span class="hljs-keyword">for</span>(<span class="hljs-number">1</span>&lt;<span class="hljs-built_in">arguments</span>.length&amp;&amp;(d=b,f=!<span class="hljs-number">0</span>),c=<span class="hljs-number">0</span>;e&gt;c;++c)<span class="hljs-keyword">this</span>.hasOwnProperty(c)&amp;&amp;(f?d=a(d,<span class="hljs-keyword">this</span>[c],c,<span class="hljs-keyword">this</span>):(d=<span class="hljs-keyword">this</span>[c],f=!<span class="hljs-number">0</span>));<span class="hljs-keyword">if</span>(!f)<span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">TypeError</span>(<span class="hljs-string">"Reduce of empty array with no initial value"</span>);<span class="hljs-keyword">return</span> d},d=<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(a,b,c)</span>{</span><span class="hljs-keyword">for</span>(<span class="hljs-keyword">var</span> d=<span class="hljs-number">0</span>,e=a.length;e&gt;d;d++)a[d].apply(b,c)},e=<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(a,b)</span>{</span><span class="hljs-keyword">var</span> e,f=[],g=[],h=[],i=!<span class="hljs-number">1</span>;<span class="hljs-keyword">return</span> e=<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span>{</span>d(f,<span class="hljs-keyword">this</span>,<span class="hljs-built_in">arguments</span>);<span class="hljs-keyword">var</span> b=a.apply(<span class="hljs-keyword">this</span>,<span class="hljs-built_in">arguments</span>);<span class="hljs-keyword">return</span> d(g,<span class="hljs-keyword">this</span>,<span class="hljs-built_in">arguments</span>),c.call(h,<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(a,b)</span>{</span><span class="hljs-keyword">return</span> b(a)},b)},b||(i=!<span class="hljs-number">0</span>,b=<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span>{</span><span class="hljs-keyword">return</span> e.apply(<span class="hljs-keyword">this</span>,<span class="hljs-built_in">arguments</span>)}),b.before=<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(a)</span>{</span><span class="hljs-keyword">return</span> f.push(a),b},b.after=<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(a)</span>{</span><span class="hljs-keyword">return</span> g.push(a),b},b.tr=<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(a)</span>{</span><span class="hljs-keyword">return</span> h.push(a),b},b.done=<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span>{</span><span class="hljs-keyword">return</span> e},i?b:e},f=<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(a,b)</span>{</span><span class="hljs-keyword">var</span> c={};<span class="hljs-keyword">return</span> a[b]=e(a[b],c),c}}).call(<span class="hljs-keyword">this</span>);</pre></div></div>
+            <div class="content"><div class='highlight'><pre>(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> {</span></pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-2">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-2">&#182;</a>
+              </div>
+              <h2 id="baseline-setup">Baseline setup</h2>
+
+            </div>
+            
+        </li>
+        
+        
+        <li id="section-3">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-3">&#182;</a>
+              </div>
+              
+            </div>
+            
+        </li>
+        
+        
+        <li id="section-4">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-4">&#182;</a>
+              </div>
+              <p>Establish the root object</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>  <span class="hljs-keyword">var</span> root = <span class="hljs-keyword">this</span>;</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-5">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-5">&#182;</a>
+              </div>
+              <p>Create the <code>monkey()</code> function.</p>
+<p><code>monkey()</code> can be invoked in one of two ways. 
+The first is to monkey-patch a function, and the other is to override a 
+method of an object.</p>
+<p>To override a function, simply pass it to <code>monkey</code>:</p>
+
+            </div>
+            
+        </li>
+        
+        
+        <li id="section-6">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-6">&#182;</a>
+              </div>
+              <pre><code><span class="hljs-keyword">var</span> fn = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> {</span> <span class="hljs-comment">/* do work */</span> };
+<span class="hljs-keyword">var</span> monkeyFn = monkey(fn);
+</code></pre>
+            </div>
+            
+        </li>
+        
+        
+        <li id="section-7">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-7">&#182;</a>
+              </div>
+              <p>Then you can use hook functions like <code>.before()</code> and <code>.after()</code>
+to add callbacks when the function is invoked. For example:</p>
+
+            </div>
+            
+        </li>
+        
+        
+        <li id="section-8">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-8">&#182;</a>
+              </div>
+              <pre><code>monkeyFn.before(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> {</span> <span class="hljs-comment">/* do some logging */</span> });
+monkeyFn.after(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> {</span> <span class="hljs-comment">/* do some clean-up */</span> });
+</code></pre>
+            </div>
+            
+        </li>
+        
+        
+        <li id="section-9">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-9">&#182;</a>
+              </div>
+              <p>When you are finished adding hooks, then you can get a reference to 
+the wrapped function without the hook helpers functions.</p>
+
+            </div>
+            
+        </li>
+        
+        
+        <li id="section-10">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-10">&#182;</a>
+              </div>
+              <pre><code><span class="hljs-keyword">var</span> newFn = monkeyFn.done();
+</code></pre>
+            </div>
+            
+        </li>
+        
+        
+        <li id="section-11">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-11">&#182;</a>
+              </div>
+              <p><code>monkey()</code> also supports a fluent interface, so you could write monkey
+patch above as the following:</p>
+
+            </div>
+            
+        </li>
+        
+        
+        <li id="section-12">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-12">&#182;</a>
+              </div>
+              <pre><code><span class="hljs-keyword">var</span> newFn = monkey(fn)
+  .before(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> {</span> <span class="hljs-comment">/* logging */</span> })
+  .after(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> {</span> <span class="hljs-comment">/* clean-up */</span> })
+  .done();
+</code></pre>
+            </div>
+            
+        </li>
+        
+        
+        <li id="section-13">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-13">&#182;</a>
+              </div>
+              <p><code>monkey()</code> can also be used to override object methods. For example:</p>
+
+            </div>
+            
+        </li>
+        
+        
+        <li id="section-14">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-14">&#182;</a>
+              </div>
+              <pre><code><span class="hljs-keyword">var</span> obj = { fn: <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> {</span> <span class="hljs-comment">/* work */</span> } };
+moneky(obj, <span class="hljs-string">"fn"</span>)
+  .before(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> {</span> <span class="hljs-comment">/* logging */</span> })
+  .after(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> {</span> <span class="hljs-comment">/* clean-up */</span> });
+</code></pre>
+            </div>
+            
+        </li>
+        
+        
+        <li id="section-15">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-15">&#182;</a>
+              </div>
+              <p>Be aware that when overriding a method then you do call <code>done()</code> to 
+unwrap the generated function. You also not need to reassign the
+generated function to the object, this is done automatically.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>  
+  <span class="hljs-keyword">var</span> monkey = <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">monkey</span><span class="hljs-params">()</span> {</span>
+    
+    <span class="hljs-keyword">var</span> fn,</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-16">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-16">&#182;</a>
+              </div>
+              <p>Quick reference to apply</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>        apply = <span class="hljs-built_in">Function</span>.prototype.apply;</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-17">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-17">&#182;</a>
+              </div>
+              <p>Function override: <code>monkey(fn)</code></p>
+<p>Verify that the argument is actually a function before
+trying to override it.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>    <span class="hljs-keyword">if</span>(<span class="hljs-built_in">arguments</span>.length == <span class="hljs-number">1</span> &amp;&amp; <span class="hljs-built_in">arguments</span>[<span class="hljs-number">0</span>].apply == apply) {
+      <span class="hljs-keyword">return</span> handleFn.apply(<span class="hljs-keyword">this</span>, <span class="hljs-built_in">arguments</span>);
+    }</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-18">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-18">&#182;</a>
+              </div>
+              <p>Method override: <code>monkey(object, property)</code></p>
+<p>Make sure that the object exists and that the specified 
+property is a function before trying to override it.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>    <span class="hljs-keyword">if</span>(<span class="hljs-built_in">arguments</span>.length == <span class="hljs-number">2</span> &amp;&amp; <span class="hljs-built_in">arguments</span>[<span class="hljs-number">0</span>] &amp;&amp; <span class="hljs-built_in">arguments</span>[<span class="hljs-number">0</span>][<span class="hljs-built_in">arguments</span>[<span class="hljs-number">1</span>]] &amp;&amp; <span class="hljs-built_in">arguments</span>[<span class="hljs-number">0</span>][<span class="hljs-built_in">arguments</span>[<span class="hljs-number">1</span>]].apply == apply) {
+      <span class="hljs-keyword">return</span> handleObj.apply(<span class="hljs-keyword">this</span>, <span class="hljs-built_in">arguments</span>);
+    }
+    
+    <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">TypeError</span>(<span class="hljs-string">"Invalid arguments"</span>);
+  };</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-19">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-19">&#182;</a>
+              </div>
+              <p>Export <code>monkey</code>.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>  <span class="hljs-keyword">if</span> (<span class="hljs-keyword">typeof</span> exports !== <span class="hljs-string">'undefined'</span>) {
+    <span class="hljs-keyword">if</span> (<span class="hljs-keyword">typeof</span> module !== <span class="hljs-string">'undefined'</span> &amp;&amp; module.exports) {
+      exports = module.exports = monkey;
+    }
+    exports.monkey = monkey;
+  } <span class="hljs-keyword">else</span> {
+    root.monkey = monkey;
+  }</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-20">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-20">&#182;</a>
+              </div>
+              <p>Quick Reference to <code>reduce()</code>. If the browser does not provide a native
+implementation then use a <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce#Polyfill">reduce polyfill</a></p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>  <span class="hljs-keyword">var</span> reduce = <span class="hljs-built_in">Array</span>.prototype.reduce || <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(callback, opt_initialValue)</span>{</span>
+<span class="hljs-pi">    'use strict'</span>;
+    <span class="hljs-keyword">if</span> (<span class="hljs-literal">null</span> === <span class="hljs-keyword">this</span> || <span class="hljs-string">'undefined'</span> === <span class="hljs-keyword">typeof</span> <span class="hljs-keyword">this</span>) {
+      <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">TypeError</span>(<span class="hljs-string">'Array.prototype.reduce called on null or undefined'</span>);
+    }
+    <span class="hljs-keyword">if</span> (<span class="hljs-string">'function'</span> !== <span class="hljs-keyword">typeof</span> callback) {
+      <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">TypeError</span>(callback + <span class="hljs-string">' is not a function'</span>);
+    }
+    <span class="hljs-keyword">var</span> index, value, length = <span class="hljs-keyword">this</span>.length &gt;&gt;&gt; <span class="hljs-number">0</span>, isValueSet = <span class="hljs-literal">false</span>;
+    <span class="hljs-keyword">if</span> (<span class="hljs-number">1</span> &lt; <span class="hljs-built_in">arguments</span>.length) {
+      value = opt_initialValue;
+      isValueSet = <span class="hljs-literal">true</span>;
+    }
+    <span class="hljs-keyword">for</span> (index = <span class="hljs-number">0</span>; length &gt; index; ++index) {
+      <span class="hljs-keyword">if</span> (<span class="hljs-keyword">this</span>.hasOwnProperty(index)) {
+        <span class="hljs-keyword">if</span> (isValueSet) {
+          value = callback(value, <span class="hljs-keyword">this</span>[index], index, <span class="hljs-keyword">this</span>);
+        }
+        <span class="hljs-keyword">else</span> {
+          value = <span class="hljs-keyword">this</span>[index];
+          isValueSet = <span class="hljs-literal">true</span>;
+        }
+      }
+    }
+    <span class="hljs-keyword">if</span> (!isValueSet) {
+      <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">TypeError</span>(<span class="hljs-string">'Reduce of empty array with no initial value'</span>);
+    }
+    <span class="hljs-keyword">return</span> value;
+  };</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-21">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-21">&#182;</a>
+              </div>
+              <p>Loop through a list of hooks, and invoke each one with the same <code>context</code> and `arguments.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>  <span class="hljs-keyword">var</span> invokeHooks = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(list, context, arguments)</span> {</span>
+    <span class="hljs-keyword">for</span>(<span class="hljs-keyword">var</span> i=<span class="hljs-number">0</span>,l=list.length;i&lt;l;i++) {
+      list[i].apply(context, <span class="hljs-built_in">arguments</span>);
+    }
+  }</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-22">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-22">&#182;</a>
+              </div>
+              <p>Handle wrapping a function for monkey patching.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>  <span class="hljs-keyword">var</span> handleFn = <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">wrap</span><span class="hljs-params">(fn, target)</span> {</span>
+    
+    <span class="hljs-keyword">var</span> <span class="hljs-comment">// The list of registered before hooks</span>
+        befores = [],</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-23">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-23">&#182;</a>
+              </div>
+              <p>The list of registered after hooks</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>        afters = [],</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-24">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-24">&#182;</a>
+              </div>
+              <p>The list of registered transformation hooks</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>        trs = [],</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-25">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-25">&#182;</a>
+              </div>
+              <p>Should this function return the <code>target</code> object or the wrapped function.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>        returnTarget = <span class="hljs-literal">false</span>,
+        wrappedFn;</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-26">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-26">&#182;</a>
+              </div>
+              <p>Define the wrapped function</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>    wrappedFn = <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">wrapper</span><span class="hljs-params">()</span> {</span></pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-27">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-27">&#182;</a>
+              </div>
+              <p>Invoke all the before hooks</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>      invokeHooks(befores, <span class="hljs-keyword">this</span>, <span class="hljs-built_in">arguments</span>);</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-28">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-28">&#182;</a>
+              </div>
+              <p>Invoke the <em>actual</em> function and hold onto its return value</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>      <span class="hljs-keyword">var</span> actualReturn = fn.apply(<span class="hljs-keyword">this</span>, <span class="hljs-built_in">arguments</span>);</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-29">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-29">&#182;</a>
+              </div>
+              <p>Invoke all the after hooks </p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>      invokeHooks(afters, <span class="hljs-keyword">this</span>, <span class="hljs-built_in">arguments</span>);</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-30">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-30">&#182;</a>
+              </div>
+              <p>Use <code>reduce</code> to apply all the transformations to the actual return value</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>      <span class="hljs-keyword">return</span> reduce.call(trs, <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(val,fn)</span> {</span> <span class="hljs-keyword">return</span> fn(val); }, actualReturn);
+    };</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-31">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-31">&#182;</a>
+              </div>
+              <p>If no target was specified</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>    <span class="hljs-keyword">if</span>(!target) {</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-32">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-32">&#182;</a>
+              </div>
+              <p>Then return the generated target object</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>      returnTarget = <span class="hljs-literal">true</span>;</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-33">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-33">&#182;</a>
+              </div>
+              <p>Create a wrapper of the wrapper. This is used to hold 
+the hook helpers when overriding an anonymous function.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>      target = <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">monkeyWrapper</span><span class="hljs-params">()</span> {</span> <span class="hljs-keyword">return</span> wrappedFn.apply(<span class="hljs-keyword">this</span>, <span class="hljs-built_in">arguments</span>) };
+    }</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-34">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-34">&#182;</a>
+              </div>
+              <p>Add a before hook</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>    target.before = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(fn)</span> {</span> befores.push(fn); <span class="hljs-keyword">return</span> target; };</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-35">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-35">&#182;</a>
+              </div>
+              <p>Add an after hook</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>    target.after = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(fn)</span> {</span> afters.push(fn); <span class="hljs-keyword">return</span> target; };</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-36">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-36">&#182;</a>
+              </div>
+              <p>Add a transform</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>    target.tr = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(fn)</span> {</span> trs.push(fn); <span class="hljs-keyword">return</span> target; };</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-37">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-37">&#182;</a>
+              </div>
+              <p>Return the <em>actual</em> generated function.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>    target.done = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> {</span> <span class="hljs-keyword">return</span> wrappedFn; };
+    
+    <span class="hljs-keyword">return</span> returnTarget ? target : wrappedFn;
+  }</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-38">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-38">&#182;</a>
+              </div>
+              <p>Handle wrapping an method of an object. This will automatically override 
+the specified implementation.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>  <span class="hljs-keyword">var</span> handleObj = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(ctx, prop)</span> {</span></pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-39">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-39">&#182;</a>
+              </div>
+              <p>Create a helper for hook helpers to be applied to.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>    <span class="hljs-keyword">var</span> helper = {};</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-40">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-40">&#182;</a>
+              </div>
+              <p>Create a wrapper function and apply it back over the original function.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>    ctx[prop] = handleFn(ctx[prop], helper);</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-41">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-41">&#182;</a>
+              </div>
+              <p>Return the helper.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>    <span class="hljs-keyword">return</span> helper;
+  };
+
+}).call(<span class="hljs-keyword">this</span>);</pre></div></div>
             
         </li>
         
