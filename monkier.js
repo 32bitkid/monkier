@@ -1,4 +1,31 @@
-var monkey = (function() {
+(function() {
+  
+  var root = this;
+  
+  var monkey = function monkey() {
+    var fn, apply = Function.prototype.apply;
+    
+    // monkey(fn)
+    if(arguments.length == 1 && arguments[0].apply == apply) {
+      return handleFn.apply(this, arguments);
+    }
+    
+    // monkey(object, property)
+    if(arguments.length == 2 && arguments[0][arguments[1]].apply == apply) {
+      return handleObj.apply(this, arguments);
+    }
+    
+    throw new TypeError("Invalid arguments");
+  };
+  
+  if (typeof exports !== 'undefined') {
+    if (typeof module !== 'undefined' && module.exports) {
+      exports = module.exports = monkey;
+    }
+    exports.monkey = monkey;
+  } else {
+    root.monkey = monkey;
+  }
   
   // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce#Polyfill
   var reduce = Array.prototype.reduce || function(callback, opt_initialValue){
@@ -64,21 +91,5 @@ var monkey = (function() {
     ctx[prop] = handleFn(ctx[prop], helper)
     return helper;    
   };
-  
-  
-  return function monkeyPatch() {
-    var fn, apply = Function.prototype.apply;
-    
-    // monkey(fn)
-    if(arguments.length == 1 && arguments[0].apply == apply) {
-      return handleFn.apply(this, arguments);
-    }
-    
-    // monkey(object, property)
-    if(arguments.length == 2 && arguments[0][arguments[1]].apply == apply) {
-      return handleObj.apply(this, arguments);
-    }
-    
-    throw new TypeError("Invalid arguments");
-  };
-}());
+
+}).call(this);
