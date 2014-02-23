@@ -42,17 +42,16 @@
   //       .before(function() { /* logging */ })
   //       .after(function() { /* clean-up */ });
   
-  // Be aware that when overriding a method then you do call `done()` to 
+  // When overriding a method of an object, you do *not* need call `done()` to
   // unwrap the generated function. You also not need to reassign the
   // generated function to the object, this is done automatically.
-  
   var monkey = function monkey() {
     
     var fn,
         // Quick reference to apply
         apply = Function.prototype.apply;
     
-    // Function override: `monkey(fn)`
+    // Handle a single function argument.
     // 
     // Verify that the argument is actually a function before
     // trying to override it.
@@ -60,14 +59,17 @@
       return handleFn.apply(this, arguments);
     }
     
-    // Method override: `monkey(object, property)`
+    // Handle an object and property.
     // 
     // Make sure that the object exists and that the specified 
     // property is a function before trying to override it.
-    if(arguments.length == 2 && arguments[0] && arguments[0][arguments[1]] && arguments[0][arguments[1]].apply == apply) {
+    if(arguments.length == 2 &&
+       arguments[0] &&
+       arguments[0][arguments[1]] &&
+       arguments[0][arguments[1]].apply == apply) {
       return handleObj.apply(this, arguments);
     }
-    
+
     throw new TypeError("Invalid arguments");
   };
   
@@ -114,20 +116,18 @@
   };
 
   // Loop through a list of hooks, and invoke each one with the same `context` and `arguments.
-  var invokeHooks = function(list, context, arguments) {
+  var invokeHooks = function(list, context, args) {
     for(var i=0,l=list.length;i<l;i++) {
-      list[i].apply(context, arguments);
+      list[i].apply(context, args);
     }
-  }
+  };
   
   // Handle wrapping a function for monkey patching.
   var handleFn = function wrap(fn, target) {
     
-    var // The list of registered before hooks
-        befores = [],
-        // The list of registered after hooks
+    // Create arrays to hold the registered hooks.
+    var befores = [],
         afters = [],
-        // The list of registered transformation hooks
         trs = [],
         
         // Should this function return the `target` object or the wrapped function.
@@ -154,20 +154,19 @@
       
       // Create a wrapper of the wrapper. This is used to hold 
       // the hook helpers when overriding an anonymous function.
-      target = function monkeyWrapper() { return wrappedFn.apply(this, arguments) };
+      target = function monkeyWrapper() { return wrappedFn.apply(this, arguments); };
     }
     
-    // Add a before hook
+    // Helper functions to add hooks
     target.before = function(fn) { befores.push(fn); return target; };
-    // Add an after hook
     target.after = function(fn) { afters.push(fn); return target; };
-    // Add a transform
     target.tr = function(fn) { trs.push(fn); return target; };
-    // Return the *actual* generated function.
+
+    // Helper that return the *actual* generated function.
     target.done = function() { return wrappedFn; };
     
     return returnTarget ? target : wrappedFn;
-  }
+  };
   
   // Handle wrapping an method of an object. This will automatically override 
   // the specified implementation.
