@@ -7,6 +7,10 @@ A utility/helper for monkey patching JavaScript functions.
 
 `monkier` is a small utility for fluently monkey patching a JavaScript function. 
 
+## Documentation
+
+[Annotated Source](http://32bitkid.github.io/monkier/docs/monkier.html)
+
 ## Examples
 
 Monkey patching a function:
