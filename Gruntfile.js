@@ -1,6 +1,7 @@
 module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-docco');
+  grunt.loadNpmTasks('grunt-contrib-jshint');
   
   // Project configuration.
   grunt.initConfig({
@@ -18,6 +19,11 @@ module.exports = function(grunt) {
           output: 'docs/'
         }
       }
+    },
+    jshint: {
+      all: ["monkier.js"]
     }
   });
+
+  grunt.registerTask('default', ['jshint','uglify','docco']);
 };
