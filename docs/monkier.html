@@ -30,7 +30,10 @@
               
             </div>
             
-            <div class="content"><div class='highlight'><pre>(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> {</span></pre></div></div>
+            <div class="content"><div class='highlight'><pre><span class="hljs-comment">/* jshint strict: true, undef: true, unused: true */</span>
+<span class="hljs-comment">/* global module, exports: true */</span>
+(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">()</span> {</span>
+<span class="hljs-pi">  'use strict'</span>;</pre></div></div>
             
         </li>
         
@@ -226,15 +229,13 @@ moneky(obj, <span class="hljs-string">"fn"</span>)
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-15">&#182;</a>
               </div>
-              <p>When overriding a method of an object, you do <em>not</em> need call <code>done()</code> to 
+              <p>When overriding a method of an object, you do <em>not</em> need call <code>done()</code> to
 unwrap the generated function. You also not need to reassign the
 generated function to the object, this is done automatically.</p>
 
             </div>
             
-            <div class="content"><div class='highlight'><pre>  <span class="hljs-keyword">var</span> monkey = <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">monkey</span><span class="hljs-params">()</span> {</span>
-    
-    <span class="hljs-keyword">var</span> fn,</pre></div></div>
+            <div class="content"><div class='highlight'><pre>  <span class="hljs-keyword">var</span> monkey = <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">monkey</span><span class="hljs-params">()</span> {</span></pre></div></div>
             
         </li>
         
@@ -249,7 +250,7 @@ generated function to the object, this is done automatically.</p>
 
             </div>
             
-            <div class="content"><div class='highlight'><pre>        apply = <span class="hljs-built_in">Function</span>.prototype.apply;</pre></div></div>
+            <div class="content"><div class='highlight'><pre>    <span class="hljs-keyword">var</span> apply = <span class="hljs-built_in">Function</span>.prototype.apply;</pre></div></div>
             
         </li>
         
@@ -285,9 +286,9 @@ property is a function before trying to override it.</p>
 
             </div>
             
-            <div class="content"><div class='highlight'><pre>    <span class="hljs-keyword">if</span>(<span class="hljs-built_in">arguments</span>.length == <span class="hljs-number">2</span> &amp;&amp; 
-       <span class="hljs-built_in">arguments</span>[<span class="hljs-number">0</span>] &amp;&amp; 
-       <span class="hljs-built_in">arguments</span>[<span class="hljs-number">0</span>][<span class="hljs-built_in">arguments</span>[<span class="hljs-number">1</span>]] &amp;&amp; 
+            <div class="content"><div class='highlight'><pre>    <span class="hljs-keyword">if</span>(<span class="hljs-built_in">arguments</span>.length == <span class="hljs-number">2</span> &amp;&amp;
+       <span class="hljs-built_in">arguments</span>[<span class="hljs-number">0</span>] &amp;&amp;
+       <span class="hljs-built_in">arguments</span>[<span class="hljs-number">0</span>][<span class="hljs-built_in">arguments</span>[<span class="hljs-number">1</span>]] &amp;&amp;
        <span class="hljs-built_in">arguments</span>[<span class="hljs-number">0</span>][<span class="hljs-built_in">arguments</span>[<span class="hljs-number">1</span>]].apply == apply) {
       <span class="hljs-keyword">return</span> handleObj.apply(<span class="hljs-keyword">this</span>, <span class="hljs-built_in">arguments</span>);
     }
@@ -332,7 +333,6 @@ implementation then use a <a href="https://developer.mozilla.org/en-US/docs/Web/
             </div>
             
             <div class="content"><div class='highlight'><pre>  <span class="hljs-keyword">var</span> reduce = <span class="hljs-built_in">Array</span>.prototype.reduce || <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(callback, opt_initialValue)</span>{</span>
-<span class="hljs-pi">    'use strict'</span>;
     <span class="hljs-keyword">if</span> (<span class="hljs-literal">null</span> === <span class="hljs-keyword">this</span> || <span class="hljs-string">'undefined'</span> === <span class="hljs-keyword">typeof</span> <span class="hljs-keyword">this</span>) {
       <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-built_in">TypeError</span>(<span class="hljs-string">'Array.prototype.reduce called on null or undefined'</span>);
     }
