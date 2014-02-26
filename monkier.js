@@ -1,4 +1,7 @@
+/* jshint strict: true, undef: true, unused: true */
+/* global module, exports: true */
 (function() {
+  'use strict';
   // Baseline setup
   // --------------
   
@@ -47,9 +50,8 @@
   // generated function to the object, this is done automatically.
   var monkey = function monkey() {
     
-    var fn,
-        // Quick reference to apply
-        apply = Function.prototype.apply;
+    // Quick reference to apply
+    var apply = Function.prototype.apply;
     
     // Handle a single function argument.
     // 
@@ -86,7 +88,6 @@
   // Quick Reference to `reduce()`. If the browser does not provide a native
   // implementation then use a [reduce polyfill](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce#Polyfill)
   var reduce = Array.prototype.reduce || function(callback, opt_initialValue){
-    'use strict';
     if (null === this || 'undefined' === typeof this) {
       throw new TypeError('Array.prototype.reduce called on null or undefined');
     }
